@@ -8,7 +8,7 @@ namespace SnackMachine.Tests
         [Fact]
         public void Test1()
         {
-
+            //s
         }
     }
 }

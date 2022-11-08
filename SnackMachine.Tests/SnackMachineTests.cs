@@ -5,6 +5,9 @@ namespace SnackMachine.Tests
 {
     public class SnackMachineTests
     {
+
+        //Azin//
+
         [Fact]
         public void SnackMachineConstructor_MoneyInside()
         {
@@ -21,6 +24,8 @@ namespace SnackMachine.Tests
             Assert.Equal(sut.MoneyInTransaction, Money.None);
         }
 
-        
+        //Azin//
+
+
     }
 }

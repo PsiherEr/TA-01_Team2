@@ -51,13 +51,18 @@ namespace SnackMachine.Tests
             Assert.Equal(expected, sut.MoneyInside.Amount);
         }
 
-        [Fact]
-        public void CheckIfSnackIsBought()
+        [Theory]
+        [InlineData(0, 1, 0, 0, 0, 0.0)]
+        [InlineData(0, 0, 1, 0, 0, 0.0)]
+        [InlineData(0, 0, 0, 1, 0, 0.0)]
+        [InlineData(0, 0, 0, 0, 1, 0.0)]
+        [InlineData(0, 0, 0, 0, 0, 1.0)]
+        public void CheckIfSnackIsBought(int oneCent, int tenCent, int quarter, int oneDollar, int fiveDollar, int twentyDollar)
         {
             //Arrange
             var sut = new SnackMachineLogic.SnackMachine();
-            var insertedmoney = new Money(0, 0, 1, 0, 0, 0);
-            decimal expected = 0.25m;
+            var insertedmoney = new Money(oneCent, tenCent, quarter, oneDollar, fiveDollar, twentyDollar);
+            decimal expected = insertedmoney.Amount;
 
             //Act
             sut.InsertMoney(insertedmoney);

@@ -6,9 +6,21 @@ namespace SnackMachine.Tests
     public class SnackMachineTests
     {
         [Fact]
-        public void Test1()
+        public void SnackMachineConstructor_MoneyInside()
         {
-            //s
+            var sut = new SnackMachineLogic.SnackMachine();
+
+            Assert.Equal(sut.MoneyInside, Money.None);
         }
+
+        [Fact]
+        public void SnackMachineConstructor_MoneyInTransaction()
+        {
+            var sut = new SnackMachineLogic.SnackMachine();
+
+            Assert.Equal(sut.MoneyInTransaction, Money.None);
+        }
+
+        
     }
 }

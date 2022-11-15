@@ -1,5 +1,6 @@
 using Xunit;
 using SnackMachineLogic;
+using System;
 
 namespace SnackMachine.Tests
 {
@@ -41,6 +42,18 @@ namespace SnackMachine.Tests
 
             Assert.Equal(sut.Amount, expected);
    
+        }
+
+        [Theory]
+        [InlineData(-1, 0, 0, 0, 0, 0)]
+        [InlineData(0, -1, 0, 0, 0, 0)]
+        [InlineData(0, 0, -1, 0, 0, 0)]
+        [InlineData(0, 0, 0, -1, 0, 0)]
+        [InlineData(0, 0, 0, 0, -1, 0)]
+        [InlineData(0, 0, 0, 0, 0, -1)]
+        public void MoneyConstructor_InvalidOperationException(int cent, int tenCents, int quarter, int dollar, int fiveDollars, int twentyDollars)
+        {
+            Assert.Throws<InvalidOperationException>(() => new Money(cent, tenCents, quarter, dollar, fiveDollars, twentyDollars));
         }
 
         //Azin//

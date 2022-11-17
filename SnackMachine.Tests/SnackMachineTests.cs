@@ -12,19 +12,18 @@ namespace SnackMachine.Tests
             //Arrange
             object sut = new Money(5, 0, 0, 4, 0, 0);
             object sut1 = null;
-            bool expected = false;
+
             //Act
             bool actual = sut.Equals(sut1);
 
-            //Assert
-            Assert.Equal<bool>(expected, actual);   
+            //Assert 
+            Assert.False(actual);
         }
 
         [Theory]
         [InlineData(5, 0, 0, 4, 0, 0, true)]
         [InlineData(5, 2, 0, 4, 0, 0, false)]
-
-        public void Equals_4_Dollar_5_CentsCOmparesWithSameValue_ReturnsTrue(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount, bool expected)
+        public void Equals_ComparingObjects_ShouldCompareProperly(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount, bool expected)
         {
             //Arrange
             object sut = new Money(5, 0, 0, 4, 0, 0);
@@ -53,7 +52,6 @@ namespace SnackMachine.Tests
         [Theory]
         [InlineData(4, 3, 0, 0, 0, 0, "¢34")]
         [InlineData(5, 2, 0, 4, 1, 0, "$9,25")]
-
         public void ToString_ShowAmountOfMoneyInCorrectForm(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount, string expected)
         {
             //Arrange

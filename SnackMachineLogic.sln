@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachineLogic", "SnackMachine.Logic\SnackMachineLogic.csproj", "{AF8A6D06-E1DF-4112-9CEA-4195F54CA89C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachineLogic.Tests", "SnackMachine.Tests\SnackMachineLogic.Tests.csproj", "{F6EF0FE3-6FE4-47CE-9625-27BB9076C891}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF8A6D06-E1DF-4112-9CEA-4195F54CA89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8A6D06-E1DF-4112-9CEA-4195F54CA89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8A6D06-E1DF-4112-9CEA-4195F54CA89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8A6D06-E1DF-4112-9CEA-4195F54CA89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EF0FE3-6FE4-47CE-9625-27BB9076C891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EF0FE3-6FE4-47CE-9625-27BB9076C891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EF0FE3-6FE4-47CE-9625-27BB9076C891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EF0FE3-6FE4-47CE-9625-27BB9076C891}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90B8819A-9754-462B-A6BC-243E50B0B071}
+	EndGlobalSection
+EndGlobal

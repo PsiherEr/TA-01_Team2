@@ -51,6 +51,21 @@ namespace SnackMachine.Tests
             Assert.Equal(expected, sut.MoneyInside.Amount);
         }
 
+        [Fact]
+        public void CheckñCoinsAndNotesException()
+        {
+            //Arrange
+            var sut = new SnackMachineLogic.SnackMachine();
+            var insertedmoney = new Money(1, 0, 1, 0, 0, 1);
+            decimal expected = 21.01m;
+
+            //Act
+            sut.InsertMoney(insertedmoney);
+
+            //Assert
+            Assert.Equal(expected, sut.MoneyInTransaction.Amount);
+        }
+
         [Theory]
         [InlineData(0, 1, 0, 0, 0, 0.0)]
         [InlineData(0, 0, 1, 0, 0, 0.0)]

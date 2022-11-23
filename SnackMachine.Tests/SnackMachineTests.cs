@@ -1,5 +1,6 @@
 using Xunit;
 using SnackMachineLogic;
+using System;
 
 namespace SnackMachine.Tests
 {
@@ -57,13 +58,9 @@ namespace SnackMachine.Tests
             //Arrange
             var sut = new SnackMachineLogic.SnackMachine();
             var insertedmoney = new Money(1, 0, 1, 0, 0, 1);
-            decimal expected = 21.01m;
-
-            //Act
-            sut.InsertMoney(insertedmoney);
 
             //Assert
-            Assert.Equal(expected, sut.MoneyInTransaction.Amount);
+            Assert.Throws<InvalidOperationException>(() => sut.InsertMoney(insertedmoney));
         }
 
         [Theory]

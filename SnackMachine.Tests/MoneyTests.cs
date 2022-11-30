@@ -7,7 +7,7 @@ namespace SnackMachine.Tests
     {
         /*=================================TA-01_YurchenkoVasyl=============================*/
         [Fact]
-        public void operatorravno_returnravno_1()
+        public void operatorravno_notnull_returntrue()
         {
             var sut_1 = new Money(0, 1, 0, 0, 0, 0);
             var sut_2 = new Money(0, 1, 0, 0, 0, 0);
@@ -17,20 +17,20 @@ namespace SnackMachine.Tests
 
         }
         [Fact]
-        public void operatorravno_returnravno_2()
+        public void operatorravno_nullornotnull_returnfalse()
         {
             var sut_1 = new Money(0, 1, 0, 0, 0, 0);
-            var sut_2 = new Money(0, 0, 0, 0, 0, 0);
+            Money sut_2 = null;
 
             bool expected = false;
             Assert.Equal(expected, sut_1 == sut_2);
 
         }
         [Fact]
-        public void operatorravno_returnravno_3()
+        public void operatorravno_nullandnotnull_returntrue()
         {
-            var sut_1 = new Money(0, 0, 0, 0, 0, 0);
-            var sut_2 = new Money(0, 0, 0, 0, 0, 0);
+            Money sut_1 = null;
+            Money sut_2 = null;
 
             bool expected = true;
             Assert.Equal(expected, sut_1 == sut_2);

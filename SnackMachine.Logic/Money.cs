@@ -135,6 +135,6 @@ namespace SnackMachineLogic
 
             return "$" + Amount.ToString("0.00");
         }
-       
+
     }
 }

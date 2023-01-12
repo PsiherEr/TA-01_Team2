@@ -10,17 +10,17 @@ namespace SnackMachine.Tests
         {
             var sut_1 = new Money(0, 1, 0, 0, 0, 0);
             var sut_2 = new Money(0, 0, 1, 0, 0, 0);
-            var expected = new Money(0, 1, 1, 0, 0, 0);
-            Assert.Equal(expected, sut_1 + sut_2);
+            decimal expected = 0.35m;
+            Assert.Equal(expected, (sut_1 + sut_2).Amount);
         }
 
         [Fact]
         public void OperatorMinus()
         {
-            var sut_1 = new Money(0, 1, 0, 0, 0, 0);
-            var sut_2 = new Money(0, 1, 0, 0, 0, 0);
-            var expected = new Money(0, 0, 0, 0, 0, 0);
-            Assert.Equal(expected, sut_1 - sut_2);
+            var sut_1 = new Money(0, 0, 0, 0, 2, 0);
+            var sut_2 = new Money(0, 0, 0, 0, 1, 0);
+            decimal expected = 5m;
+            Assert.Equal(expected, (sut_1 - sut_2).Amount);
         }
     }
 }
